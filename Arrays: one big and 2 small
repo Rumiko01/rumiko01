@@ -1,0 +1,33 @@
+/* Один большой массив и два маленьких*/
+
+package com.javarush.task.task07.task0705;
+import java.io.*;
+ import java.util.Arrays;
+
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        
+        int[] bigArray = new int[20];
+            for(int i = 0; i < bigArray.length; i++){
+                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                String s = reader.readLine();
+                bigArray [i] = Integer.parseInt(s);
+          }
+        int[] array1 = new int[10];
+        int[] array2 = new int[10];
+       
+        int [] array11 = Arrays.copyOfRange(bigArray, 0, bigArray.length/2);
+        int [] array22 = Arrays.copyOfRange(bigArray, bigArray.length/2, bigArray.length);
+       
+           for(int i=0; i < array1.length; i++){
+                array1[i] = array11[i];   
+       }
+          for(int i=0; i < array2.length; i++){
+                array2[i] = array22[i]; 
+                System.out.println(array2[i]);
+       }
+       
+
+    }
+}
