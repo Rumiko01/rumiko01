@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.ArrayList;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        Reader r = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(r);
+        ArrayList <String>  list  =  new ArrayList <String> ( );
+        for (int i = 0;  i < 5;  i++)  {
+            String s = reader.readLine( );
+            list.add( s); }
+       for (int j = 0;  j < 13;  j++)  {
+            String s = list.remove (list.size( ) - 1);
+            list.add( 0,  s); }
+      for (int i = 0;  i < list.size( );  i++) {
+            System.out.println( list.get(i) ); }
+    }}
+
+
